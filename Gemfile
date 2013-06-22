@@ -13,7 +13,7 @@ gem 'unicorn'
 gem 'capistrano'
 
 
-gem 'sqlite3'
+gem 'mysql2'
 
 gem 'json'
 

@@ -1,0 +1,31 @@
+  * 2013-06-22 02:00:51 executing `deploy:setup'
+  * executing "mkdir -p /home/root/apps/Blog_new /home/root/apps/Blog_new/releases /home/root/apps/Blog_new/shared /home/root/apps/Blog_new/shared/system /home/root/apps/Blog_new/shared/log /home/root/apps/Blog_new/shared/pids"
+    servers: ["198.199.91.118"]
+Password: 
+    [198.199.91.118] executing command
+    command finished in 1010ms
+  * executing "chmod g+w /home/root/apps/Blog_new /home/root/apps/Blog_new/releases /home/root/apps/Blog_new/shared /home/root/apps/Blog_new/shared/system /home/root/apps/Blog_new/shared/log /home/root/apps/Blog_new/shared/pids"
+    servers: ["198.199.91.118"]
+    [198.199.91.118] executing command
+    command finished in 1013ms
+    triggering after callbacks for `deploy:setup'
+  * 2013-06-22 02:01:20 executing `deploy:setup_config'
+  * executing "sudo -p 'sudo password: ' ln -nfs /home/root/apps/Blog_new/current/config/nginx.conf /etc/nginx/sites-enabled/Blog_new"
+    servers: ["198.199.91.118"]
+    [198.199.91.118] executing command
+    command finished in 1013ms
+  * executing "sudo -p 'sudo password: ' ln -nfs /home/root/apps/Blog_new/current/config/unicorn_init.sh /etc/init.d/unicorn_Blog_new"
+    servers: ["198.199.91.118"]
+    [198.199.91.118] executing command
+    command finished in 1014ms
+  * executing "mkdir -p /home/root/apps/Blog_new/shared/config"
+    servers: ["198.199.91.118"]
+    [198.199.91.118] executing command
+    command finished in 1006ms
+    servers: ["198.199.91.118"]
+ ** sftp upload #<StringIO:0x7f565762cf28> -> /home/root/apps/Blog_new/shared/config/database.yml
+    [198.199.91.118] /home/root/apps/Blog_new/shared/config/database.yml
+    [198.199.91.118] done
+  * sftp upload complete
+Now edit the config files in /home/root/apps/Blog_new/shared.
+
