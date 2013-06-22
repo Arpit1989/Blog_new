@@ -71,4 +71,5 @@ reopen-logs)
 *)
   echo >&2 "Usage: $0 <start|stop|restart|upgrade|force-stop|reopen-logs>"
   exit 1
-  ;
+  ;;
+esa
