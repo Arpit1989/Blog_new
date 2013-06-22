@@ -1,7 +1,7 @@
 server "198.199.91.118", :web, :app, :db, primary: true
 
 set :application, "Blog_new"
-set :user, "deployer"
+set :user, "root"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
