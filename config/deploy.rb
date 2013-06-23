@@ -1,13 +1,6 @@
 require "bundler/capistrano"
 
-set :host, "198.199.91.118"
-set :location, "198.199.91.118"
-
-role :web, location # Your HTTP server, Apache/etc
-role :app, location # This may be the same as your `Web` server
-role :db, location, :primary => true # This is where Rails migrations will run
-
-
+server "198.199.91.118", :web, :app, :db, :primary => true
 
 set :application, "Blog_new"
 set :user, "root"
@@ -24,11 +17,10 @@ ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
-
 namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
-    task command, :roles => :app, :except => {:no_release => true} do
+    task command, :roles => :app, except: {:no_release true} do
       run "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
