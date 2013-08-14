@@ -12,8 +12,7 @@ gem 'unicorn'
 # Deploy with Capistrano
 gem 'capistrano'
 
-
-gem 'mysql2'
+gem 'pg'
 
 gem 'json'
 
